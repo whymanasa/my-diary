@@ -5,13 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
-    <link rel="stylesheet" href="indexx.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <div>
-        Hello
+    <div class="main_container">
+    
+        <div class="entry1">
+            <h2>What Happened Today</h2>
+            <h1 id="diaryTitle"></h1>
+            <textarea placeholder="Write about your day..."></textarea>
+            <button onclick="storeData()">Store Data</button>
+        </div>
+        <div class="entry2">
+            <h2>Reflections on What Went Wrong</h2>
+            <textarea placeholder="Reflect on the challenges..."></textarea>
+        </div>
+        <div class="entry3">
+            <h2>Happy Moments</h2>
+            <textarea placeholder="Write about the happy moments..."></textarea>
+        </div>
     </div>
+<script>
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    const diaryName = getQueryParam('diary');
+    if (diaryName) {
+        document.getElementById('diaryTitle').innerText = `Dear: ${diaryName}`;
+    }
+</script>
 </body>
 
 </html>

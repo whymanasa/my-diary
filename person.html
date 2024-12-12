@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal-details</title>
+    <link rel="stylesheet" href="person.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="personalForm">
+            <label for="username">What should we call you by?</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="userdetails">Could you tell a few words about yourself?</label>
+            <input type="text" id="userdetails" name="userdetails" required>
+
+            <label for="diary">What would you name your diary?</label>
+            <input type="text" id="diary" name="diary" required>
+
+            <input type="submit" value="Done">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('personalForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get the diary name
+            const diaryName = document.getElementById('diary').value;
+
+            // Redirect to main.html with the diary name as a query parameter
+            window.location.href = `main.html?diary=${encodeURIComponent(diaryName)}`;
+        });
+    </script>
+</body>
+
+</html>
