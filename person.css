@@ -30,3 +30,16 @@
     background-color: brown;
 
 }
+#personalForm label {
+    color: bisque;
+    font-size: larger;
+}
+
+.button {
+    width: 15%;
+    height: 10%;
+    background-color: black;
+    color: bisque;
+    margin-left: 280px;
+    margin-top: 10px;
+}

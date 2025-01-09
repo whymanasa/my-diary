@@ -35,7 +35,7 @@
 
 }
 
-textarea {
+.main_container textarea {
     width: 100%;
     /* Full width of the parent div */
     height: 70%;
@@ -51,5 +51,12 @@ textarea {
     background-color: rgba(255, 255, 255, 0.5);
     /* Semi-transparent white background */
     color: black;
-    /* Text color */
-}
+    font-size: 17px;
+    }
+    
+    .button {
+        background-color: #8f2041;
+        padding: 15px;
+        color: bisque;
+        margin: 20px;
+    }
